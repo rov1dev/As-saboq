@@ -116,13 +116,36 @@ img {
     box-shadow: 2px 1px 4px 7px #0000002f;
     letter-spacing: 2px;
 }
+
 /* get-buy end */
 /* about2 start */
-.about-title{
+.about-title {
     color: #FF9E67;
 }
 
+#about2 {
+    background: url("/img/Rectangle\ 58.png") no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    height: 50vh;
+}
 
+#about2 h3 {
+    line-height: 40px;
+    font-size: 30px;
+}
+
+.about2-card {
+    width: 70px;
+    height: 70px;
+    background-color: #FF9E67;
+    margin-right: 25px;
+}
+
+.extra2-card span {
+    color: #EB6B68;
+
+}
 
 @media only screen and (max-width: 992px) {
     .home-status {
@@ -148,10 +171,12 @@ img {
     #get-buy center {
         margin-top: 80px;
     }
-    .get-buyForm button{
+
+    .get-buyForm button {
         margin-top: 30px;
     }
-    .get-buyForm input{
+
+    .get-buyForm input {
         margin-top: 20px;
     }
 }
