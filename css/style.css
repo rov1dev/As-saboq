@@ -71,23 +71,58 @@ img {
 }
 
 #price {
-    background: url("/img/Снимок\ экрана\ \(16\).png")no-repeat center top/contain;
+    background: url("/img/Reactangle17.png") no-repeat center top/contain;
     width: 100%;
-    height: 110vh;
+    height: 100vh;
 }
 
 .price-disc {
+    background-color: white;
     box-shadow: 2px 1px 4px 7px #0000002f;
     padding: 30px 20px;
 
 }
 
 .price-time {
+    width: 50%;
+    background-color: white;
     margin-top: 80px;
     box-shadow: 2px 1px 4px 7px #0000002f;
     padding: 40px 20px 30px 20px;
-
 }
+
+/* price end */
+/* buy start */
+.buy-card {
+    box-shadow: 2px 1px 4px 7px #0000002f;
+    padding: 0 40px;
+}
+
+.get-buyForm input {
+    padding: 12px 20px;
+    outline: none;
+    border: none;
+    box-shadow: 2px 1px 4px 7px #0000002f;
+    border-radius: 10px;
+    color: #654115;
+    font-weight: 500;
+}
+
+.get-buyForm button {
+    padding: 12px 0;
+    border: none;
+    background-color: #C98A3B;
+    color: white;
+    box-shadow: 2px 1px 4px 7px #0000002f;
+    letter-spacing: 2px;
+}
+/* get-buy end */
+/* about2 start */
+.about-title{
+    color: #FF9E67;
+}
+
+
 
 @media only screen and (max-width: 992px) {
     .home-status {
@@ -102,13 +137,29 @@ img {
         height: 110vh;
     }
 
+    .price-time {
+        width: 90%;
+    }
+
+    .buy-card {
+        margin-top: 100px;
+    }
+
+    #get-buy center {
+        margin-top: 80px;
+    }
+    .get-buyForm button{
+        margin-top: 30px;
+    }
+    .get-buyForm input{
+        margin-top: 20px;
+    }
 }
 
 @media only screen and (max-width: 754px) {
 
     .home-status {
         margin-top: 50px;
-
     }
 
     .home-status1 {
@@ -122,8 +173,13 @@ img {
     .h1orangep {
         font-size: 20px;
     }
-    .price-time{
+
+    .price-time {
         width: 100%;
+    }
+
+    #get-buy center {
+        margin-top: 60px;
     }
 }
 
@@ -134,5 +190,9 @@ img {
 
     .home-status {
         margin-top: 150px;
+    }
+
+    #get-buy center {
+        margin-top: 80px;
     }
 }
