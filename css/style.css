@@ -77,11 +77,6 @@ img {
 
 /* home end */
 /* price start */
-
-.price-imgs {
-    position: relative;
-}
-
 #price {
     background: url("/img/Reactangle17.png") no-repeat center top/contain;
     width: 100%;
@@ -92,7 +87,10 @@ img {
     background-color: white;
     box-shadow: 2px 1px 4px 7px #0000002f;
     padding: 30px 20px;
+}
 
+.price-disc h4 {
+    line-height: 50px;
 }
 
 .price-time {
@@ -135,10 +133,12 @@ img {
     color: #FF9E67;
 }
 
+.about-img-res {
+    width: 80%;
+}
+
 #about2 {
-    background: url("/img/Rectangle\ 58.png") no-repeat;
-    background-position: center bottom;
-    background-size: cover;
+    background: url("/img/Rectangle\ 58.png") no-repeat center bottom/cover;
     height: 50vh;
 }
 
@@ -159,35 +159,76 @@ img {
 }
 
 #facts-about {
-    background: url("/img/Rectangle\ 76.png") no-repeat center top/contain;
-    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/img/Rectangle\ 76.png") no-repeat center top/cover;
+    height: 75vh;
     margin-top: 80px;
     color: white;
 }
 
 #facts-about2 {
     background: url("/img/Rectangle\ 58.png") no-repeat center top/cover;
+    padding-bottom: 20px;
 }
 
 .message {
-    width: 85%;
     border: 2px solid black;
+    margin-left: 30px;
+    padding: 13px 15px;
+
+}
+
+.message1 {
+    border: 2px solid black;
+    margin-right: 30px;
+    padding: 13px 15px;
 }
 
 .messagebig {
-    margin: 0 auto;
-    width: 75%;
     border: 2px solid black;
-    padding: 40px 0 30px 0;
+    padding: 50px 40px;
+    margin-right: 30px;
+
 }
+
 /* about2 end */
 /* media start*/
-.get-buys{
+.get-buys {
     margin-top: 50px;
-    background: url("/img/Rectangle\ 17.png" )no-repeat center top/cover;
+    background: url("/img/Rectangle\ 17.png")no-repeat center top/cover;
     width: 100%;
     padding-top: 50px;
     padding-bottom: 50px;
+}
+
+.media-icons a {
+    color: #C3873C;
+    font-size: 30px;
+}
+
+.media-icons a:not(:first-child) {
+    padding-left: 15px;
+}
+
+.time-res {
+    padding-top: 50px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .time-res {
+        padding-top: 150px;
+    }
+
+    #get-buy {
+        margin-top: 130px;
+    }
+
+    .extra-lite .col-lg-10 h4 {
+        font-size: 20px !important;
+    }
+
+    .centerDiv2 h3 {
+        font-size: 20px !important;
+    }
 }
 
 @media only screen and (max-width: 992px) {
@@ -200,7 +241,7 @@ img {
     }
 
     #about {
-        height: 110vh;
+        height: 80vh;
     }
 
     .price-time {
@@ -222,9 +263,39 @@ img {
     .get-buyForm input {
         margin-top: 20px;
     }
+
+    .about-title-res {
+        padding-top: 200px;
+    }
+
+    .about-txt-res h2 {
+        font-size: 25px;
+    }
+
+    .price-disc h4 {
+        font-size: 15px;
+        line-height: 30px;
+    }
+
+    .about-title3 {
+        font-size: 25px !important;
+        line-height: 35px !important;
+    }
+
+    .extra-lite .col-lg-10 h4 {
+        font-size: 20px !important;
+    }
+
+    .centerDiv2 h3 {
+        font-size: 17px !important;
+    }
+
+    .title-ress {
+        font-size: 30px;
+    }
 }
 
-@media only screen and (max-width: 754px) {
+@media only screen and (max-width: 768px) {
 
     .home-status {
         margin-top: 50px;
@@ -235,7 +306,7 @@ img {
     }
 
     #about {
-        height: 95vh;
+        height: 40vh;
     }
 
     .h1orangep {
@@ -249,11 +320,59 @@ img {
     #get-buy center {
         margin-top: 60px;
     }
+
+    .about-title-res {
+        padding-top: 10px;
+    }
+
+    .about-img-res {
+        width: 70%;
+    }
+
+    .about-txt-res h2 {
+        font-size: 15px;
+    }
+
+    .price-disc h4 {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .price-disc {
+        padding: 20px 15px;
+    }
+
+    .time-res {
+        padding-top: 100px;
+    }
+
+    #get-buy {
+        margin-top: -50px;
+    }
+
+    .about-title3 {
+        font-size: 20px !important;
+        line-height: 30px !important;
+    }
+
+    .centerDiv2 h3 {
+        font-size: 20px !important;
+    }
+
+    .container-hand div {
+        line-height: 15px;
+    }
+    .centerDiv2 div {
+        padding-top: 50px;
+    }
+    #facts-about {
+        height: 100vh;
+    }
 }
 
-@media only screen and (max-width: 502px) {
+@media only screen and (max-width: 575px) {
     #about {
-        height: 100vh;
+        height: 40vh;
     }
 
     .home-status {
@@ -262,5 +381,44 @@ img {
 
     #get-buy center {
         margin-top: 80px;
+    }
+
+    .about-txt-res h2 {
+        font-size: 10px;
+    }
+
+    .about-img-res {
+        width: 60%;
+    }
+
+    .price-disc h4 {
+        font-size: 10px;
+        line-height: 13px;
+    }
+
+    .price-disc {
+        padding: 15px 10px;
+    }
+
+    #price .h1orangep {
+        font-size: 13px;
+        padding-top: 20px !important;
+        padding-bottom: -40px !important;
+    }
+
+    .time-res {
+        padding-top: 60px;
+    }
+
+    #get-buy {
+        margin-top: -200px;
+    }
+
+    .about-title3 {
+        font-size: 15px !important;
+        line-height: 25px !important;
+    }
+    .centerDiv2 div {
+        padding-top: 40px;
     }
 }
