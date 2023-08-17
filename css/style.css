@@ -5,7 +5,12 @@
 }
 
 /* basic style */
-
+.discription{
+    background: url("/img/Rectangle\ 58.png") no-repeat center top/cover;
+    width: 100%;
+    height: 100vh;
+    padding: 50px 100px;
+}
 .centerDiv {
     margin: 0 auto;
 }
@@ -26,7 +31,10 @@ img {
 .centerDiv2 div {
     padding-top: 80px;
 }
-
+.h1orange1{
+    color: #FF9E67;
+    text-decoration: none;
+}
 /* basic style */
 
 .nav-article {
@@ -67,7 +75,7 @@ img {
 #about {
     background: url("/img/Rectangle\ 58.png") no-repeat center/cover;
     width: 100%;
-    height: 60vh;
+    height: 80vh;
 }
 
 .home-status,
@@ -212,6 +220,10 @@ img {
 .time-res {
     padding-top: 50px;
 }
+/* js css */
+.terme{
+    background-color: red;
+}
 
 @media only screen and (max-width: 1200px) {
     .time-res {
@@ -306,7 +318,7 @@ img {
     }
 
     #about {
-        height: 40vh;
+        height: 45vh;
     }
 
     .h1orangep {
@@ -367,6 +379,8 @@ img {
     }
     #facts-about {
         height: 100vh;
+    }.carousel1-title{
+        font-size:18px ;
     }
 }
 
