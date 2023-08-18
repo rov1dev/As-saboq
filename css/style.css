@@ -34,6 +34,9 @@ img {
     color: #FF9E67;
     text-decoration: none;
 }
+.text-carus{
+    background-color: #C98A3B !important;
+}
 /* basic style */
 
 .nav-article {
@@ -221,7 +224,7 @@ img {
 .time-res {
     padding-top: 50px;
 }
-.buydiv{
+.buydiv,.buydiv1,.buydiv2{
     margin: auto;
     width: 20px;
     height: 20px;
@@ -254,6 +257,9 @@ img {
 
     .centerDiv2 h3 {
         font-size: 20px !important;
+    }
+    #about2{
+        height: 80vh;
     }
 }
 
@@ -393,8 +399,15 @@ img {
     }
     #facts-about {
         height: 100vh;
-    }.carousel1-title{
+    }
+    .message h3, .message1 h3,.messagebig h3{
+        font-size: 20px;
+    }
+    .carousel1-title{
         font-size:18px ;
+    }
+    .title-ress{
+        font-size: 25px;
     }
 }
 
@@ -448,5 +461,11 @@ img {
     }
     .centerDiv2 div {
         padding-top: 40px;
+    }
+    .title-ress{
+        font-size: 18px;
+    }
+    #facts-about{
+        height: 120vh !important;
     }
 }
