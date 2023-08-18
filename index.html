@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="/bootstrap-5.3.1-dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/style.scss">
 </head>
 
 <body>
@@ -228,31 +227,31 @@
     </center>
     <div class="container mt-5">
       <div class="row ">
-        <div class="col-lg-3 col-md-6 col-sm-12">
-          <div class="buy-card rounded-4 text-center p-2 w-75 centerDiv">
+        <div class="col-lg-3 col-md-6 col-sm-12 ">
+          <div class="buy-card rounded-4 text-center p-2 w-75 centerDiv carder">
             <img class="w-100 px-2" src="/img/Rectangle 67.png" alt="">
-            <input type="checkbox"></input>
+            <div class="buydiv"></div>
           </div>
           <h2 class="text-center pt-5"><b>Arab tili kursi</b></h2>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-12">
-          <div class="buy-card rounded-4 text-center p-2 w-75  centerDiv">
+        <div class="col-lg-3 col-md-6 col-sm-12 ">
+          <div class="buy-card rounded-4 text-center p-2 w-75  centerDiv carder">
             <img class="w-100 px-2" src="/img/Rectangle 67 (1).png" alt="">
-            <input type="checkbox"></input>
+            <div class="buydiv"></div>
           </div>
           <h2 class="text-center pt-5"><b>Ingliz tili kursi</b></h2>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-12">
-          <div class="buy-card rounded-4 text-center p-2 w-75  centerDiv">
+        <div class="col-lg-3 col-md-6 col-sm-12 ">
+          <div class="buy-card rounded-4 text-center p-2 w-75  centerDiv carder">
             <img class="w-100 px-2" src="/img/Rectangle 67 (2).png" alt="">
-            <input type="checkbox"></input>
+            <div class="buydiv"></div>
           </div>
           <h2 class="text-center pt-5"><b>Rus tili kursi</b></h2>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-12">
-          <div class="buy-card rounded-4 text-center p-2 w-75  centerDiv">
+        <div class="col-lg-3 col-md-6 col-sm-12 ">
+          <div class="buy-card rounded-4 text-center p-2 w-75  centerDiv carder">
             <img class="w-100 px-2" src="/img/Rectangle 67 (3).png" alt="">
-            <input type="checkbox"></input>
+            <div class="buydiv"></div>
           </div>
           <h2 class="text-center pt-5"><b>Xitoy tili kursi</b></h2>
         </div>
@@ -263,16 +262,16 @@
           tugmasini bosing
         </h2>
       </center>
-      <form action="" class="get-buyForm mt-5">
+      <form action="" class="get-buyForm mt-5" onsubmit="return sendtelegram()">
         <div class="row">
           <div class="col-lg-4 col-md-6 text-center col-sm-12">
-            <input type="text" id="" class="w-75" placeholder="Ismingizni yozing...">
+            <input type="text" id="name" class="w-75" placeholder="Ismingizni yozing..." required>
           </div>
           <div class="col-lg-4 col-md-6 text-center col-sm-12">
-            <input type="tel" id="" class="w-75" placeholder="telefon raqamingiz...">
+            <input type="tel" id="surname" class="w-75" placeholder="telefon raqamingiz..." required>
           </div>
           <div class="col-lg-4 col-md-12 text-center col-sm-12">
-            <button class="w-75 rounded-3"><b>Buyurtma berish</b></button>
+            <button class="w-75 rounded-3" id><b>Buyurtma berish</b></button>
           </div>
         </div>
       </form>
@@ -414,31 +413,31 @@
   <section id="get-buy2">
     <div class="container mt-5">
       <div class="row">
-        <div class="col-lg-3 col-md-6 col-sm-12">
-          <div class="buy-card rounded-4 text-center p-2 w-75 centerDiv">
+        <div class="col-lg-3 col-md-6 col-sm-12 ">
+          <div class="buy-card rounded-4 text-center p-2 w-75 centerDiv carder">
             <img class="w-100 px-2" src="/img/Rectangle 67.png" alt="">
-            <input type="checkbox"></input>
+            <div class="buydiv"></div>
           </div>
           <h2 class="text-center pt-5"><b>Arab tili kursi</b></h2>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-12">
-          <div class="buy-card rounded-4 text-center p-2 w-75  centerDiv">
+        <div class="col-lg-3 col-md-6 col-sm-12 ">
+          <div class="buy-card rounded-4 text-center p-2 w-75  centerDiv carder">
             <img class="w-100 px-2" src="/img/Rectangle 67 (1).png" alt="">
-            <input type="checkbox"></input>
+            <div class="buydiv"></div>
           </div>
           <h2 class="text-center pt-5"><b>Ingliz tili kursi</b></h2>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-12">
-          <div class="buy-card rounded-4 text-center p-2 w-75  centerDiv">
+        <div class="col-lg-3 col-md-6 col-sm-12 ">
+          <div class="buy-card rounded-4 text-center p-2 w-75  centerDiv carder">
             <img class="w-100 px-2" src="/img/Rectangle 67 (2).png" alt="">
-            <input type="checkbox"></input>
+            <div class="buydiv"></div>
           </div>
           <h2 class="text-center pt-5"><b>Rus tili kursi</b></h2>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-12">
-          <div class="buy-card rounded-4 text-center p-2 w-75  centerDiv">
+        <div class="col-lg-3 col-md-6 col-sm-12 ">
+          <div class="buy-card rounded-4 text-center p-2 w-75  centerDiv carder">
             <img class="w-100 px-2" src="/img/Rectangle 67 (3).png" alt="">
-            <input type="checkbox"></input>
+            <div class="buydiv"></div>
           </div>
           <h2 class="text-center pt-5"><b>Xitoy tili kursi</b></h2>
         </div>
@@ -450,13 +449,13 @@
         </h2>
         <h1 class="h1orange pt-3">Hoziroq buyurtma bering! </h1>
       </center>
-      <form action="" class="get-buyForm mt-5">
+      <form action="" class="get-buyForm mt-5" onsubmit="return sendtelegram()">
         <div class="row">
           <div class="col-lg-4 col-md-6 text-center col-sm-12">
-            <input type="text" id="" class="w-75" placeholder="Ismingizni yozing...">
+            <input type="text" id="name" class="w-75" placeholder="Ismingizni yozing..." required>
           </div>
           <div class="col-lg-4 col-md-6 text-center col-sm-12">
-            <input type="tel" id="" class="w-75" placeholder="telefon raqamingiz...">
+            <input type="tel" id="surname" class="w-75" placeholder="telefon raqamingiz..." required>
           </div>
           <div class="col-lg-4 col-md-12 text-center col-sm-12">
             <button class="w-75 rounded-3"><b>Buyurtma berish</b></button>
@@ -582,28 +581,28 @@
         <div class="col-lg-3 col-md-6 col-sm-12 ">
           <div class="buy-card rounded-4 text-center p-2 w-75 centerDiv carder">
             <img class="w-100 px-2" src="/img/Rectangle 67.png" alt="">
-            <input id="email" type="radio" required ></input>
+            <div class="buydiv"></div>
           </div>
           <h2 class="text-center pt-5"><b>Arab tili kursi</b></h2>
         </div>
         <div class="col-lg-3 col-md-6 col-sm-12 ">
           <div class="buy-card rounded-4 text-center p-2 w-75  centerDiv carder">
             <img class="w-100 px-2" src="/img/Rectangle 67 (1).png" alt="">
-            <input id="email" type="radio" required name="ingliz"></input>
+            <div class="buydiv"></div>
           </div>
           <h2 class="text-center pt-5"><b>Ingliz tili kursi</b></h2>
         </div>
         <div class="col-lg-3 col-md-6 col-sm-12 ">
           <div class="buy-card rounded-4 text-center p-2 w-75  centerDiv carder">
             <img class="w-100 px-2" src="/img/Rectangle 67 (2).png" alt="">
-            <input id="email" type="radio" required></input>
+            <div class="buydiv"></div>
           </div>
           <h2 class="text-center pt-5"><b>Rus tili kursi</b></h2>
         </div>
         <div class="col-lg-3 col-md-6 col-sm-12 ">
           <div class="buy-card rounded-4 text-center p-2 w-75  centerDiv carder">
             <img class="w-100 px-2" src="/img/Rectangle 67 (3).png" alt="">
-            <input id="email" type="radio" required></input>
+            <div class="buydiv"></div>
           </div>
           <h2 class="text-center pt-5"><b>Xitoy tili kursi</b></h2>
         </div>
@@ -674,7 +673,6 @@
       <h5 class="text-secondary pt-5">As-Saboq company</h5>
     </center>
   </footer>
-  <a class="btn-8" href="#">Smoosh</a>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 <script src="/bootstrap-5.3.1-dist/js/bootstrap.min.js"></script>

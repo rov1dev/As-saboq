@@ -1,19 +1,4 @@
 
-$(function() {  
-    $('.btn-6')
-      .on('mouseenter', function(e) {
-        var parentOffset = $(this).offset(),
-            relX = e.pageX - parentOffset.left,
-            relY = e.pageY - parentOffset.top;
-        $(this).find('span').css({top:relY, left:relX})
-      })
-      .on('mouseout', function(e) {
-        var parentOffset = $(this).offset(),
-            relX = e.pageX - parentOffset.left,
-            relY = e.pageY - parentOffset.top;
-        $(this).find('span').css({top:relY, left:relX})
-      });
-  });
 const array = [
     {
         id: 1,
@@ -33,30 +18,39 @@ const array = [
     }
 ]
 let gmail = document.querySelectorAll(".carder");
+let buydiv = document.querySelectorAll(".buydiv");
 let boxer = "";
 
-gmail.forEach((element,i) => {
-    element.addEventListener("click", () => {
-        removeActiveClass();
-        element.classList.toggle("terme");
-        let box = i + 1;
-        array.forEach(element => {
-            if (element.id === box) {
-                boxer = element.name
+gmail.forEach((elementO, i) => {
+    let box = i + 1;
+    array.forEach(element => {
+        elementO.addEventListener("click", () => {
+
+            if (element.id == box) {
+                reset1()
+                reset2()
+                boxer = element.name;
+                console.log(elementO);
+                elementO.classList.toggle("terme")
+                buydiv[i].classList.toggle("terme2")
+
             } else {
                 ""
             }
         })
     });
-
 });
-
-function removeActiveClass() {
-
+function reset1() {
     gmail.forEach(element => {
         element.classList.remove("terme");
     });
 }
+function reset2() {
+    buydiv.forEach(element => {
+        element.classList.remove("terme2");
+    });
+}
+
 //bot token
 var telegram_bot_id = "6054114967:AAFfn-ajhy7IZOX_q0REmXVJiV3uCmNER9E";
 //chat id
@@ -70,7 +64,7 @@ var ready = function () {
 };
 var sendtelegram = function () {
     ready();
-    
+
     var settings = {
         "async": true,
         "crossDomain": true,

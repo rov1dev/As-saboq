@@ -3,7 +3,6 @@
     margin: 0;
     box-sizing: border-box;
 }
-
 /* basic style */
 .discription{
     background: url("/img/Rectangle\ 58.png") no-repeat center top/cover;
@@ -197,7 +196,9 @@ img {
     margin-right: 30px;
 
 }
-
+.carder{
+    transition: all 1s linear;
+}
 /* about2 end */
 /* media start*/
 .get-buys {
@@ -220,9 +221,22 @@ img {
 .time-res {
     padding-top: 50px;
 }
+.buydiv{
+    margin: auto;
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: white;
+}
 /* js css */
 .terme{
-    background-color: red;
+    background-color: #e6e5e5;
+    transition: all 0.2s ease-in-out;
+}
+.terme2{
+    background-color: #C3873C;
+    transition: all 0.2s ease-in-out;
 }
 
 @media only screen and (max-width: 1200px) {
