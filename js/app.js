@@ -1,54 +1,76 @@
 
-
+$(function() {  
+    $('.btn-6')
+      .on('mouseenter', function(e) {
+        var parentOffset = $(this).offset(),
+            relX = e.pageX - parentOffset.left,
+            relY = e.pageY - parentOffset.top;
+        $(this).find('span').css({top:relY, left:relX})
+      })
+      .on('mouseout', function(e) {
+        var parentOffset = $(this).offset(),
+            relX = e.pageX - parentOffset.left,
+            relY = e.pageY - parentOffset.top;
+        $(this).find('span').css({top:relY, left:relX})
+      });
+  });
 const array = [
     {
-        id:1,
-        name:"Arab"
+        id: 1,
+        name: "Arab"
     },
     {
-        id:2,
-        name:"Ingliz"
+        id: 2,
+        name: "Ingliz"
     },
     {
-        id:3,
-        name:"Russ"
+        id: 3,
+        name: "Russian"
     },
     {
-        id:4,
-        name:"Xitoy"
+        id: 4,
+        name: "Xitoy"
     }
 ]
+let gmail = document.querySelectorAll(".carder");
 let boxer = "";
-let gmail = document.querySelectorAll("#buy-card");
-    for (let i = 0; i < array.length; i++) {
-    gmail[i].addEventListener("click",()=>{
-        gmail[i].classList.toggle("terme");
-        let box = i+1;
 
-       array.forEach(element => {
-        if(element.id === box){
-    boxer = element.name;
-    console.log(boxer);
-        }else{
-            ""
-        }
+gmail.forEach((element,i) => {
+    element.addEventListener("click", () => {
+        removeActiveClass();
+        element.classList.toggle("terme");
+        let box = i + 1;
+        array.forEach(element => {
+            if (element.id === box) {
+                boxer = element.name
+            } else {
+                ""
+            }
+        })
     });
-    })    
-    }
 
+});
 
+function removeActiveClass() {
+
+    gmail.forEach(element => {
+        element.classList.remove("terme");
+    });
+}
 //bot token
 var telegram_bot_id = "6054114967:AAFfn-ajhy7IZOX_q0REmXVJiV3uCmNER9E";
 //chat id
-var chat_id = 1524783641; 
+var chat_id = 1524783641;
 var ismi, familya, email, message;
-var ready = function() {
+var ready = function () {
     ismi = document.getElementById("name").value;
     familya = document.getElementById("surname").value;
-    message = "Ismi: " + ismi + "\nNomer: " + familya;
+    message = "Ismi: " + ismi + "\nNomer: " + familya + "\nKitob: " + boxer;
+
 };
-var sendtelegram = function() {
-    ready();    
+var sendtelegram = function () {
+    ready();
+    
     var settings = {
         "async": true,
         "crossDomain": true,
@@ -63,7 +85,7 @@ var sendtelegram = function() {
             "text": message
         })
     };
-    $.ajax(settings).done(function(response) {
+    $.ajax(settings).done(function (response) {
         console.log(response);
     });
     // document.getElementById("name").value = "";
