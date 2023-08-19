@@ -60,6 +60,7 @@ var ready = function () {
 };
 var sendtelegram = function () {
     ready();
+    resetALL()
     var settings = {
         "async": true,
         "crossDomain": true,
@@ -124,6 +125,7 @@ var ready1 = function () {
 };
 var sendtelegram1 = function () {
     ready1();
+    resetALL()
     var settings = {
         "async": true,
         "crossDomain": true,
@@ -189,6 +191,7 @@ var ready2 = function () {
 };
 var sendtelegram2 = function () {
     ready2();
+    resetALL()
     var settings = {
         "async": true,
         "crossDomain": true,
@@ -211,32 +214,40 @@ var sendtelegram2 = function () {
     return false;
 };
 
-document.addEventListener('DOMContentLoaded', function() {
-    const deadline = new Date(2023, 08, 15);
+function resetALL() {
+    reset1()
+    reset2()
+    reset11()
+    reset21()
+    reset12()
+    reset22()
+}
+document.addEventListener('DOMContentLoaded', function () {
+    const deadline = new Date("2023", "08", "15");
     // id таймера
     let timerId = null;
     // склонение числительных
     function declensionNum(num, words) {
-      return words[(num % 100 > 4 && num % 100 < 20) ? 2 : [2, 0, 1, 1, 1, 2][(num % 10 < 5) ? num % 10 : 5]];
+        return words[(num % 100 > 4 && num % 100 < 20) ? 2 : [2, 0, 1, 1, 1, 2][(num % 10 < 5) ? num % 10 : 5]];
     }
     // вычисляем разницу дат и устанавливаем оставшееся времени в качестве содержимого элементов
     function countdownTimer() {
-      const diff = deadline - new Date();
-      if (diff <= 0) {
-        clearInterval(timerId);
-      }
-      const days = diff > 0 ? Math.floor(diff / 1000 / 60 / 60 / 24) : 0;
-      const hours = diff > 0 ? Math.floor(diff / 1000 / 60 / 60) % 24 : 0;
-      const minutes = diff > 0 ? Math.floor(diff / 1000 / 60) % 60 : 0;
-      const seconds = diff > 0 ? Math.floor(diff / 1000) % 60 : 0;
-      $days.textContent = days < 10 ? '0' + days : days;
-      $hours.textContent = hours < 10 ? '0' + hours : hours;
-      $minutes.textContent = minutes < 10 ? '0' + minutes : minutes;
-      $seconds.textContent = seconds < 10 ? '0' + seconds : seconds;
-      $days.dataset.title = declensionNum(days, ['день', 'дня', 'дней']);
-      $hours.dataset.title = declensionNum(hours, ['час', 'часа', 'часов']);
-      $minutes.dataset.title = declensionNum(minutes, ['минута', 'минуты', 'минут']);
-      $seconds.dataset.title = declensionNum(seconds, ['секунда', 'секунды', 'секунд']);
+        const diff = deadline - new Date();
+        if (diff <= 0) {
+            clearInterval(timerId);
+        }
+        const days = diff > 0 ? Math.floor(diff / 1000 / 60 / 60 / 24) : 0;
+        const hours = diff > 0 ? Math.floor(diff / 1000 / 60 / 60) % 24 : 0;
+        const minutes = diff > 0 ? Math.floor(diff / 1000 / 60) % 60 : 0;
+        const seconds = diff > 0 ? Math.floor(diff / 1000) % 60 : 0;
+        $days.textContent = days < 10 ? '0' + days : days;
+        $hours.textContent = hours < 10 ? '0' + hours : hours;
+        $minutes.textContent = minutes < 10 ? '0' + minutes : minutes;
+        $seconds.textContent = seconds < 10 ? '0' + seconds : seconds;
+        $days.dataset.title = declensionNum(days, ['день', 'дня', 'дней']);
+        $hours.dataset.title = declensionNum(hours, ['час', 'часа', 'часов']);
+        $minutes.dataset.title = declensionNum(minutes, ['минута', 'минуты', 'минут']);
+        $seconds.dataset.title = declensionNum(seconds, ['секунда', 'секунды', 'секунд']);
     }
     // получаем элементы, содержащие компоненты даты
     const $days = document.querySelector('.timer__days');
@@ -247,4 +258,4 @@ document.addEventListener('DOMContentLoaded', function() {
     countdownTimer();
     // вызываем функцию countdownTimer каждую секунду
     timerId = setInterval(countdownTimer, 1000);
-  });
+});
