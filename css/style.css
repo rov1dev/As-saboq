@@ -3,13 +3,15 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 /* basic style */
-.discription{
+.discription {
     background: url("/img/Rectangle\ 58.png") no-repeat center top/cover;
     width: 100%;
     height: 100vh;
     padding: 50px 100px;
 }
+
 .centerDiv {
     margin: 0 auto;
 }
@@ -30,13 +32,16 @@ img {
 .centerDiv2 div {
     padding-top: 80px;
 }
-.h1orange1{
+
+.h1orange1 {
     color: #FF9E67;
     text-decoration: none;
 }
-.text-carus{
+
+.text-carus {
     background-color: #C98A3B !important;
 }
+
 /* basic style */
 
 .nav-article {
@@ -143,6 +148,11 @@ img {
     color: #FF9E67;
 }
 
+.extra2-card img:hover {
+    transform: scale(1.1);
+    transition: .1s linear;
+}
+
 .about-img-res {
     width: 80%;
 }
@@ -199,9 +209,11 @@ img {
     margin-right: 30px;
 
 }
-.carder{
+
+.carder {
     transition: all 1s linear;
 }
+
 /* about2 end */
 /* media start*/
 .get-buys {
@@ -224,7 +236,10 @@ img {
 .time-res {
     padding-top: 50px;
 }
-.buydiv,.buydiv1,.buydiv2{
+
+.buydiv,
+.buydiv1,
+.buydiv2 {
     margin: auto;
     width: 20px;
     height: 20px;
@@ -232,12 +247,14 @@ img {
     border-radius: 5px;
     background-color: white;
 }
+
 /* js css */
-.terme{
+.terme {
     background-color: #e6e5e5;
     transition: all 0.2s ease-in-out;
 }
-.terme2{
+
+.terme2 {
     background-color: #C3873C;
     transition: all 0.2s ease-in-out;
 }
@@ -251,15 +268,16 @@ img {
         margin-top: 130px;
     }
 
-    .extra-lite .col-lg-10 h4 {
-        font-size: 20px !important;
-    }
-
     .centerDiv2 h3 {
         font-size: 20px !important;
     }
-    #about2{
+
+    #about2 {
         height: 80vh;
+    }
+
+    .abouttest h4 {
+        font-size: 18px;
     }
 }
 
@@ -314,10 +332,6 @@ img {
         line-height: 35px !important;
     }
 
-    .extra-lite .col-lg-10 h4 {
-        font-size: 20px !important;
-    }
-
     .centerDiv2 h3 {
         font-size: 17px !important;
     }
@@ -325,6 +339,21 @@ img {
     .title-ress {
         font-size: 30px;
     }
+
+    .abouttest h4 {
+        font-size: 14px;
+    }
+
+    .about2-card {
+        width: 6vh;
+        height: 6vh;
+
+    }
+
+    .about2-card h1 {
+        font-size: 20px;
+    }
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -394,26 +423,64 @@ img {
     .container-hand div {
         line-height: 15px;
     }
+
     .centerDiv2 div {
         padding-top: 50px;
     }
+
     #facts-about {
         height: 100vh;
     }
-    .message h3, .message1 h3,.messagebig h3{
+
+    .message h3,
+    .message1 h3,
+    .messagebig h3 {
         font-size: 20px;
     }
-    .carousel1-title{
-        font-size:18px ;
+
+    .carousel1-title {
+        font-size: 18px;
     }
-    .title-ress{
+
+    .title-ress {
         font-size: 25px;
     }
+    .abouttest h4 {
+        font-size: 11px;
+    }
+    .about2-card {
+        width: 5vh;
+        height: 5vh;
+        border-radius: 10px !important;
+
+    }
+
+    .about2-card h1 {
+        font-size: 15px;
+    }
+
 }
 
 @media only screen and (max-width: 575px) {
+    .home-status1 {
+        margin-top: 130px !important;
+    }
+
+    .home-status img {
+        width: 50% !important;
+    }
+
+    .home-status {
+        margin-top: 50px !important;
+    }
+
+    .home-about {
+        font-size: 18px;
+    }
+
     #about {
-        height: 40vh;
+        margin-top: -280px !important;
+        height: 50vh;
     }
 
     .home-status {
@@ -459,13 +526,69 @@ img {
         font-size: 15px !important;
         line-height: 25px !important;
     }
+
     .centerDiv2 div {
         padding-top: 40px;
     }
-    .title-ress{
+
+    .title-ress {
         font-size: 18px;
     }
-    #facts-about{
+
+    #facts-about {
         height: 120vh !important;
+    }
+
+    .message h3,
+    .message1 h3,
+    .messagebig h3 {
+        font-size: 12px;
+    }
+
+    .messagebig {
+        padding: 15px 10px;
+    }
+}
+
+@media only screen and (max-height:750px) {
+    .fact-title h3 {
+        font-size: 13px !important;
+    }
+
+}
+
+@media only screen and (max-height:630px) {
+    #about {
+        margin-top: -220px !important;
+    }
+
+    .about-title-res {
+        font-size: 15px !important;
+        padding-top: 50px !important;
+    }
+
+    .time-res h1 {
+        font-size: 20px !important;
+    }
+
+    .price-time {
+        margin-top: 50px;
+        padding: 20px 10px 10px 10px;
+    }
+
+    .price-time h2,
+    p {
+        font-size: 15px;
+    }
+
+}
+
+@media only screen and (max-height:530px) {
+    .getB-text {
+        margin-top: 200px !important;
+    }
+
+    #about {
+        margin-top: -150px !important;
     }
 }
