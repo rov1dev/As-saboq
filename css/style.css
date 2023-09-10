@@ -41,7 +41,9 @@ img {
 .text-carus {
     background-color: #C98A3B !important;
 }
-
+.ch-icon{
+    color: white !important;
+}
 /* basic style */
 
 .nav-article {
@@ -213,6 +215,7 @@ img {
 
 .carder {
     transition: all 1s linear;
+    background-color: white;
 }
 
 /* about2 end */

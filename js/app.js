@@ -1,39 +1,36 @@
 
 const array = [
     {
-        id: 1,
+        id: 0,
         name: "Arab"
     },
     {
-        id: 2,
+        id: 1,
         name: "Ingliz"
     },
     {
-        id: 3,
+        id: 2,
         name: "Russian"
     },
     {
-        id: 4,
+        id: 3,
         name: "Xitoy"
     }
 ]
 let gmail = document.querySelectorAll(".carder");
 let buydiv = document.querySelectorAll(".buydiv");
+let bi = document.querySelectorAll(".bi");
 let boxer = "";
 
 gmail.forEach((elementO, i) => {
-    let box = i + 1;
+    let box = i;
     elementO.addEventListener("click", () => {
-        reset1()
-        reset2()
         array.forEach(element => {
             if (element.id == box) {
-                boxer = element.name;
-                console.log(elementO);
+                boxer += element.name;
                 elementO.classList.toggle("terme")
                 buydiv[i].classList.toggle("terme2")
-            } else {
-                ""
+                bi[i].classList.toggle("bi-check-lg")
             }
         })
     });
