@@ -2,39 +2,61 @@
 const array = [
     {
         id: 0,
-        name: "Arab"
+        active: true,
+        name: "Arab-tili;\n"
     },
     {
         id: 1,
-        name: "Ingliz"
+        active: true,
+        name: "Ingliz-tili;\n"
     },
     {
         id: 2,
-        name: "Russian"
+        active: true,
+        name: "Russian-tili;\n"
     },
     {
         id: 3,
-        name: "Xitoy"
+        active: true,
+        name: "Xitoy-tili;\n"
     }
 ]
 let gmail = document.querySelectorAll(".carder");
 let buydiv = document.querySelectorAll(".buydiv");
 let bi = document.querySelectorAll(".bi");
-let boxer = "";
-
+let boxer = [];
+let boxerBig = "";
 gmail.forEach((elementO, i) => {
     let box = i;
     elementO.addEventListener("click", () => {
+        elementO.classList.toggle("terme");
+        buydiv[i].classList.toggle("terme2");
+        bi[i].classList.toggle("bi-check-lg");
         array.forEach(element => {
-            if (element.id == box) {
-                boxer += element.name;
-                elementO.classList.toggle("terme")
-                buydiv[i].classList.toggle("terme2")
-                bi[i].classList.toggle("bi-check-lg")
+            if (box == element.id) {
+                if (element.active) {
+                    boxer.push(element.name)
+                    element.active = false;
+                    console.log(boxer)
+                }
+                else {
+                    boxer.pop(element.name)
+                    element.active = true;
+                    console.log(boxer);
+                }
             }
         })
-    });
+
+    })
+
 });
+function worker() {
+    boxer.forEach(element => {
+        boxerBig = element;
+        console.log(boxerBig);
+    });
+}
+
 function reset1() {
     gmail.forEach(element => {
         element.classList.remove("terme");
