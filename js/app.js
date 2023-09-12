@@ -3,29 +3,45 @@ const array = [
     {
         id: 0,
         active: true,
-        name: "Arab-tili;\n"
+        name: "Arab-tili\t"
     },
     {
         id: 1,
         active: true,
-        name: "Ingliz-tili;\n"
+        name: "Ingliz-tili\t"
     },
     {
         id: 2,
         active: true,
-        name: "Russian-tili;\n"
+        name: "Rus-tili\t"
     },
     {
         id: 3,
         active: true,
-        name: "Xitoy-tili;\n"
+        name: "Xitoy-tili\t"
     }
 ]
 let gmail = document.querySelectorAll(".carder");
 let buydiv = document.querySelectorAll(".buydiv");
-let bi = document.querySelectorAll(".bi");
+let bi = document.querySelectorAll(".ch-icon");
+let modal = document.querySelector(".modalcha");
+let close = document.querySelector(".close1")
+let close2 = document.querySelector(".close2")
+let win = document.querySelector(".maint")
+
+close.addEventListener("click", () => {
+    modal.style.display = "none";
+    win.classList.remove("mains");
+})
+close2.addEventListener("click", () => {
+    modal.style.display = "none";
+    win.classList.remove("mains");
+})
+win.addEventListener("click", () => {
+    modal.style.display = "none";
+    win.classList.remove("mains");
+})
 let boxer = [];
-let boxerBig = "";
 gmail.forEach((elementO, i) => {
     let box = i;
     elementO.addEventListener("click", () => {
@@ -50,13 +66,6 @@ gmail.forEach((elementO, i) => {
     })
 
 });
-function worker() {
-    boxer.forEach(element => {
-        boxerBig = element;
-        console.log(boxerBig);
-    });
-}
-
 function reset1() {
     gmail.forEach(element => {
         element.classList.remove("terme");
@@ -76,6 +85,8 @@ var ready = function () {
     ismi = document.getElementById("name").value;
     familya = document.getElementById("surname").value;
     message = "Ismi: " + ismi + "\nNomer: " + familya + "\nKitob: " + boxer;
+    win.classList.add("mains");
+    modal.style.display = "block";
 };
 var sendtelegram = function () {
     ready();
@@ -104,20 +115,26 @@ var sendtelegram = function () {
 
 let gmail1 = document.querySelectorAll(".carder1");
 let buydiv1 = document.querySelectorAll(".buydiv1");
-let boxer1 = "";
+let bi1 = document.querySelectorAll(".ch-icon1");
+
+let boxer1 = [];
 
 gmail1.forEach((elementO, i) => {
-    let box1 = i + 1;
+    let box1 = i;
     elementO.addEventListener("click", () => {
-        reset11()
-        reset21()
+        elementO.classList.toggle("terme");
+        buydiv1[i].classList.toggle("terme2");
+        bi1[i].classList.toggle("bi-check-lg");
         array.forEach(element => {
-            if (element.id == box1) {
-                boxer1 = element.name;
-                elementO.classList.toggle("terme")
-                buydiv1[i].classList.toggle("terme2")
-            } else {
-                ""
+            if (box1 == element.id) {
+                if (element.active) {
+                    boxer1.push(element.name)
+                    element.active = false;
+                }
+                else {
+                    boxer1.pop(element.name)
+                    element.active = true;
+                }
             }
         })
     });
@@ -141,6 +158,8 @@ var ready1 = function () {
     ismi1 = document.getElementById("name1").value;
     familya1 = document.getElementById("surname1").value;
     message1 = "Ismi: " + ismi1 + "\nNomer: " + familya1 + "\nKitob: " + boxer1;
+    win.classList.add("mains");
+    modal.style.display = "block";
 };
 var sendtelegram1 = function () {
     ready1();
@@ -170,20 +189,28 @@ var sendtelegram1 = function () {
 
 let gmail2 = document.querySelectorAll(".carder2");
 let buydiv2 = document.querySelectorAll(".buydiv2");
-let boxer2 = "";
+let bi2 = document.querySelectorAll(".ch-ico2");
+let boxer2 = [];
+
 
 gmail2.forEach((elementO, i) => {
-    let box2 = i + 1;
+    let box2 = i;
     elementO.addEventListener("click", () => {
-        reset12()
-        reset22()
+        elementO.classList.toggle("terme");
+        buydiv2[i].classList.toggle("terme2");
+        bi2[i].classList.toggle("bi-check-lg");
         array.forEach(element => {
-            if (element.id == box2) {
-                boxer2 = element.name;
-                elementO.classList.toggle("terme")
-                buydiv2[i].classList.toggle("terme2")
-            } else {
-                ""
+            if (box2 == element.id) {
+                if (element.active) {
+                    boxer2.push(element.name)
+                    element.active = false;
+                    console.log(boxer2)
+                }
+                else {
+                    boxer2.pop(element.name)
+                    element.active = true;
+                    console.log(boxer2);
+                }
             }
         })
     });
@@ -207,6 +234,8 @@ var ready2 = function () {
     ismi2 = document.getElementById("name2").value;
     familya2 = document.getElementById("surname2").value;
     message2 = "Ismi: " + ismi2 + "\nNomer: " + familya2 + "\nKitob: " + boxer2;
+    modal.style.display = "block";
+    win.classList.add("mains");
 };
 var sendtelegram2 = function () {
     ready2();

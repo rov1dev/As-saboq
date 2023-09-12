@@ -5,6 +5,14 @@
 }
 
 /* basic style */
+.mains {
+    z-index: 9;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+}
+
 .discription {
     background: url("/img/Rectangle\ 58.png") no-repeat center top/cover;
     width: 100%;
@@ -41,9 +49,13 @@ img {
 .text-carus {
     background-color: #C98A3B !important;
 }
-.ch-icon{
+
+.ch-icon,
+.ch-icon1,
+.ch-ico2 {
     color: white !important;
 }
+
 /* basic style */
 
 .nav-article {
@@ -84,7 +96,7 @@ img {
 #about {
     background: url("/img/Rectangle\ 58.png") no-repeat center/cover;
     width: 100%;
-    height:max-content;
+    height: max-content;
     padding-bottom: 50px;
 }
 
@@ -170,8 +182,9 @@ img {
     line-height: 40px;
     font-size: 30px;
 }
+
 .about2-card {
-    width:8vh !important;
+    width: 8vh !important;
     height: 8vh !important;
     background-color: #FF9E67;
     margin-right: 25px;
@@ -263,10 +276,23 @@ img {
     transition: all 0.2s ease-in-out;
 }
 
+.modalcha {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%);
+    width: 400px;
+    margin: auto;
+    box-shadow: 0px 0px 10px gray;
+}
+
 @media only screen and (max-width: 1200px) {
     .time-res {
         padding-top: 150px;
     }
+
     #get-buy {
         margin-top: 130px;
     }
@@ -274,6 +300,7 @@ img {
     .centerDiv2 h3 {
         font-size: 20px !important;
     }
+
     .abouttest h4 {
         font-size: 18px;
     }
@@ -287,6 +314,7 @@ img {
     .home-status1 {
         margin-top: 250px;
     }
+
     .price-time {
         width: 90%;
     }
@@ -358,6 +386,7 @@ img {
     .home-status1 {
         margin-top: 200px;
     }
+
     .h1orangep {
         font-size: 20px;
     }
@@ -438,7 +467,7 @@ img {
         font-size: 11px;
     }
 
-    .about2-card { 
+    .about2-card {
         border-radius: 10px !important;
 
     }
@@ -465,6 +494,7 @@ img {
     .home-about {
         font-size: 18px;
     }
+
     .home-status {
         margin-top: 150px;
     }
@@ -566,6 +596,7 @@ img {
     .getB-text {
         margin-top: 200px !important;
     }
+
     #price {
         height: fit-content;
     }
