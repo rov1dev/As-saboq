@@ -20,33 +20,20 @@ const array = [
         active: true,
         name: "Xitoy-tili\t"
     }
-]
-let gmail = document.querySelectorAll(".carder");
-let buydiv = document.querySelectorAll(".buydiv");
-let bi = document.querySelectorAll(".ch-icon");
-let modal = document.querySelector(".modalcha");
-let close1 = document.querySelector(".close1")
-let close2 = document.querySelector(".close2")
-let win = document.querySelector(".maint")
-close1.addEventListener("click", () => {
+];let gmail = document.querySelectorAll(".carder");let buydiv = document.querySelectorAll(".buydiv");let bi = document.querySelectorAll(".ch-icon");let modal = document.querySelector(".modalcha");let close1 = document.querySelector(".close1");let close2 = document.querySelector(".close2");let win = document.querySelector(".maint");close1.addEventListener("click", () => {
     modal.style.display = "none";
     win.classList.remove("mains");
-})
-close2.addEventListener("click", () => {
+});close2.addEventListener("click", () => {
     modal.style.display = "none";
     win.classList.remove("mains");
-})
-win.addEventListener("click", () => {
+});win.addEventListener("click", () => {
     modal.style.display = "none";
     win.classList.remove("mains");
-})
-function roster() {
+});function roster() {
     array.forEach(element => {
         element.active = true;
     });
-}
-let boxer = [];
-gmail.forEach((elementO, i) => {
+};let boxer = [];gmail.forEach((elementO, i) => {
     let box = i;
     elementO.addEventListener("click", () => {
         elementO.classList.toggle("terme");
@@ -69,8 +56,7 @@ gmail.forEach((elementO, i) => {
 
     })
 
-});
-function reset1() {
+});function reset1() {
     gmail.forEach(element => {
         element.classList.remove("terme");
     });
@@ -80,20 +66,13 @@ function reset1() {
     bi.forEach(element => {
         element.classList.remove("bi-check-lg");
     });
-}
-//bot token
-var telegram_bot_id = "6054114967:AAFfn-ajhy7IZOX_q0REmXVJiV3uCmNER9E";
-//chat id
-var chat_id = 1524783641;
-var ismi, familya, message;
-var ready = function () {
+};var telegram_bot_id = "6054114967:AAFfn-ajhy7IZOX_q0REmXVJiV3uCmNER9E";var chat_id = 1524783641;var ismi, familya, message;var ready = function () {
     ismi = document.getElementById("name").value;
     familya = document.getElementById("surname").value;
     message = "Ismi: " + ismi + "\nNomer: " + familya + "\nKitob: " + boxer;
     win.classList.add("mains");
     modal.style.display = "block";
-};
-var sendGroup = function () {
+};var sendGroup = function () {
     //bot token
     var telegram_botid = "6054114967:AAFfn-ajhy7IZOX_q0REmXVJiV3uCmNER9E";
     //chat id
@@ -103,11 +82,10 @@ var sendGroup = function () {
         .then(data => {
             console.log(data);
         })
-}
-var sendtelegram = function () {
+};var sendtelegram = function () {
+    ready();
     sendGroup();
     roster()
-    ready();
     resetALL()
     var settings = {
         "async": true,
@@ -131,15 +109,7 @@ var sendtelegram = function () {
     document.getElementById("name").value = "";
     document.getElementById("surname").value = "";
     return false;
-};
-
-
-let gmail1 = document.querySelectorAll(".carder1");
-let buydiv1 = document.querySelectorAll(".buydiv1");
-let bi1 = document.querySelectorAll(".ch-icon1");
-let boxer1 = [];
-
-gmail1.forEach((elementO, i) => {
+};let gmail1 = document.querySelectorAll(".carder1");let buydiv1 = document.querySelectorAll(".buydiv1");let bi1 = document.querySelectorAll(".ch-icon1");let boxer1 = [];gmail1.forEach((elementO, i) => {
     let box1 = i;
     elementO.addEventListener("click", () => {
         elementO.classList.toggle("terme");
@@ -158,8 +128,7 @@ gmail1.forEach((elementO, i) => {
             }
         })
     });
-});
-function reset11() {
+});function reset11() {
     gmail1.forEach(element => {
         element.classList.remove("terme");
     });
@@ -169,21 +138,14 @@ function reset11() {
     bi1.forEach(element => {
         element.classList.remove("bi-check-lg");
     });
-}
-//bot token
-var telegram_bot_id = "6054114967:AAFfn-ajhy7IZOX_q0REmXVJiV3uCmNER9E";
-//chat id
-var chat_id = 1524783641;
-var ismi1, familya1, message1;
-var ready1 = function () {
+};var telegram_bot_id = "6054114967:AAFfn-ajhy7IZOX_q0REmXVJiV3uCmNER9E";var chat_id = 1524783641;var ismi1, familya1, message1;var ready1 = function () {
     ismi1 = document.getElementById("name1").value;
     familya1 = document.getElementById("surname1").value;
     message1 = "Ismi: " + ismi1 + "\nNomer: " + familya1 + "\nKitob: " + boxer1;
     win.classList.add("mains");
     modal.style.display = "block";
 
-};
-var sendGroup1 = function () {
+};var sendGroup1 = function () {
     //bot token
     var telegram_botid = "6054114967:AAFfn-ajhy7IZOX_q0REmXVJiV3uCmNER9E";
     //chat id
@@ -193,10 +155,9 @@ var sendGroup1 = function () {
         .then(data => {
             console.log(data);
         })
-}
-var sendtelegram1 = function () {
-    sendGroup1()
+};var sendtelegram1 = function () {
     ready1();
+    sendGroup1()
     roster()
     resetALL()
     var settings = {
@@ -220,16 +181,7 @@ var sendtelegram1 = function () {
     document.getElementById("name1").value = "";
     document.getElementById("surname1").value = "";
     return false;
-};
-
-
-let gmail2 = document.querySelectorAll(".carder2");
-let buydiv2 = document.querySelectorAll(".buydiv2");
-let bi2 = document.querySelectorAll(".ch-ico2");
-let boxer2 = [];
-
-
-gmail2.forEach((elementO, i) => {
+};let gmail2 = document.querySelectorAll(".carder2");let buydiv2 = document.querySelectorAll(".buydiv2");let bi2 = document.querySelectorAll(".ch-ico2");let boxer2 = [];gmail2.forEach((elementO, i) => {
     let box2 = i;
     elementO.addEventListener("click", () => {
         elementO.classList.toggle("terme");
@@ -250,8 +202,7 @@ gmail2.forEach((elementO, i) => {
             }
         })
     });
-});
-function reset12() {
+});function reset12() {
     gmail2.forEach(element => {
         element.classList.remove("terme");
     });
@@ -261,21 +212,14 @@ function reset12() {
     bi2.forEach(element => {
         element.classList.remove("bi-check-lg")
     })
-}
-//bot token
-var telegram_bot_id = "6054114967:AAFfn-ajhy7IZOX_q0REmXVJiV3uCmNER9E";
-//chat id
-var chat_id = 1524783641;
-var ismi2, familya2, message2;
-var ready2 = function () {
+};var telegram_bot_id = "6054114967:AAFfn-ajhy7IZOX_q0REmXVJiV3uCmNER9E";var chat_id = 1524783641;var ismi2, familya2, message2;var ready2 = function () {
     ismi2 = document.getElementById("name2").value;
     familya2 = document.getElementById("surname2").value;
     message2 = "Ismi: " + ismi2 + "\nNomer: " + familya2 + "\nKitob: " + boxer2;
     modal.style.display = "block";
     win.classList.add("mains");
 
-};
-var sendGroup2 = function () {
+};var sendGroup2 = function () {
     //bot token
     var telegram_botid = "6054114967:AAFfn-ajhy7IZOX_q0REmXVJiV3uCmNER9E";
     //chat id
@@ -285,10 +229,9 @@ var sendGroup2 = function () {
         .then(data => {
             console.log(data);
         })
-}
-var sendtelegram2 = function () {
-    sendGroup2()
+};var sendtelegram2 = function () {
     ready2();
+    sendGroup2();
     roster()
     resetALL()
     var settings = {
@@ -312,26 +255,15 @@ var sendtelegram2 = function () {
     document.getElementById("name2").value = "";
     document.getElementById("surname2").value = "";
     return false;
-};
-function resetALL() {
+};function resetALL() {
     reset1()
     reset11()
     reset12()
-}
-document.addEventListener('DOMContentLoaded', function () {
-    const deadline = new Date("2023", "08", "15");
-    // id таймера
-    let timerId = null;
-    // склонение числительных
-    function declensionNum(num, words) {
-        return words[(num % 100 > 4 && num % 100 < 20) ? 2 : [2, 0, 1, 1, 1, 2][(num % 10 < 5) ? num % 10 : 5]];
-    }
-    // вычисляем разницу дат и устанавливаем оставшееся времени в качестве содержимого элементов
-    function countdownTimer() {
-        const diff = deadline - new Date();
-        if (diff <= 0) {
-            clearInterval(timerId);
-        }
+};document.addEventListener('DOMContentLoaded', function () {
+    const deadline = new Date("2023", "08", "15");// id таймера
+    let timerId = null;// склонение числительных
+    function declensionNum(num, words) {return words[(num % 100 > 4 && num % 100 < 20) ? 2 : [2, 0, 1, 1, 1, 2][(num % 10 < 5) ? num % 10 : 5]];}// вычисляем разницу дат и устанавливаем оставшееся времени в качестве содержимого элементов
+    function countdownTimer() {const diff = deadline - new Date();if (diff <= 0) {clearInterval(timerId);}
         const days = diff > 0 ? Math.floor(diff / 1000 / 60 / 60 / 24) : 0;
         const hours = diff > 0 ? Math.floor(diff / 1000 / 60 / 60) % 24 : 0;
         const minutes = diff > 0 ? Math.floor(diff / 1000 / 60) % 60 : 0;

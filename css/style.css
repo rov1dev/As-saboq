@@ -2,143 +2,83 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
-
-/* basic style */
-.mains {
+}body{
+    transition: all 1s ease;
+}/* basic style */.mains {
     z-index: 9;
     width: 100%;
     height: 100vh;
     position: fixed;
     background: rgba(0, 0, 0, 0.5);
-}
-
-.discription {
+}.discription {
     background: url("/img/Rectangle\ 58.png") no-repeat center top/cover;
     width: 100%;
     height: max-content;
     padding: 50px 100px;
-}
-
-.centerDiv {
+}.centerDiv {
     margin: 0 auto;
-}
-
-.h1orange {
+}.h1orange {
     color: #C98A3B;
     text-align: center;
-}
-
-img {
+}img {
     object-fit: cover;
-}
-
-.container-hand {
+}.container-hand {
     padding: 0 50px;
-}
-
-.centerDiv2 div {
+}.centerDiv2 div {
     padding-top: 80px;
-}
-
-.h1orange1 {
+}.h1orange1 {
     color: #FF9E67;
     text-decoration: none;
-}
-
-.text-carus {
+}.text-carus {
     background-color: #C98A3B !important;
-}
-
-.ch-icon,
-.ch-icon1,
-.ch-ico2 {
+}.ch-icon,.ch-icon1,.ch-ico2 {
     color: white !important;
-}
-
-/* basic style */
-
-.nav-article {
+}/* basic style */.nav-article {
     transition: all 0.2s ease-in-out;
-}
-
-.nav-article button {
+}.nav-article button {
     background-color: #FF9E67;
     padding: 4px 25px;
-}
-
-.nav-article button:hover {
+}.nav-article button:hover {
     background-color: #ff9f67e0;
-}
-
-.nav-article a {
+}.nav-article a {
     font-size: 18px;
     margin: 0 15px;
-}
-
-.nav-article>a:hover {
+}.nav-article>a:hover {
     color: #FF9E67 !important;
-}
-
-/* navbar end */
-/* home start */
-#bg-home {
+}/* navbar end *//* home start */#bg-home {
     background: url("/img/Rectangle\ 51.png")no-repeat center top;
     background-size: 100%;
     height: 100%;
     height: max-content;
-}
-
-.home-about span {
+}.home-about span {
     color: #C98A3B;
-}
-
-#about {
+}#about {
     background: url("/img/Rectangle\ 58.png") no-repeat center/cover;
     width: 100%;
     height: max-content;
     padding-bottom: 50px;
-}
-
-.home-status,
-.home-status1 {
+}.home-status,.home-status1 {
     margin-top: 450px;
-}
-
-/* home end */
-/* price start */
-#price {
+}/* home end *//* price start */#price {
     background: url("/img/Reactangle17.png") no-repeat center top/contain;
     width: 100%;
     height: 100vh;
-}
-
-.price-disc {
+}.price-disc {
     background-color: white;
     box-shadow: 2px 1px 4px 7px #0000002f;
     padding: 30px 20px;
-}
-
-.price-disc h4 {
+}.price-disc h4 {
     line-height: 50px;
-}
-
-.price-time {
+}.price-time {
     width: 50%;
     background-color: white;
     margin-top: 80px;
     box-shadow: 2px 1px 4px 7px #0000002f;
     padding: 40px 20px 30px 20px;
-}
-
-/* price end */
-/* buy start */
-.buy-card {
+}/* price end *//* buy start */.buy-card {
     box-shadow: 2px 1px 4px 7px #0000002f;
     padding: 0 40px;
-}
-
-.get-buyForm input {
+}.get-buyForm input {
     padding: 12px 20px;
     outline: none;
     border: none;
@@ -146,137 +86,86 @@ img {
     border-radius: 10px;
     color: #654115;
     font-weight: 500;
-}
-
-.get-buyForm button {
+}.get-buyForm button {
     padding: 12px 0;
     border: none;
     background-color: #C98A3B;
     color: white;
     box-shadow: 2px 1px 4px 7px #0000002f;
     letter-spacing: 2px;
-}
-
-/* get-buy end */
-/* about2 start */
-.about-title {
+}/* get-buy end *//* about2 start */.about-title {
     color: #FF9E67;
-}
-
-.extra2-card img:hover {
+}.extra2-card img:hover {
     transform: scale(1.1);
     transition: .1s linear;
-}
-
-.about-img-res {
+}.about-img-res {
     width: 80%;
-}
-
-#about2 {
+}#about2 {
     background: url("/img/Rectangle\ 58.png") no-repeat center bottom/cover;
     height: max-content;
     padding-bottom: 30px;
-}
-
-#about2 h3 {
+}#about2 h3 {
     line-height: 40px;
     font-size: 30px;
-}
-
-.about2-card {
+}.about2-card {
     width: 8vh !important;
     height: 8vh !important;
     background-color: #FF9E67;
     margin-right: 25px;
-}
-
-.extra2-card span {
+}.extra2-card span {
     color: #EB6B68;
-}
-
-#facts-about {
+}#facts-about {
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/img/Rectangle\ 76.png") no-repeat center top/cover;
     height: 75vh;
     margin-top: 80px;
     color: white;
-}
-
-#facts-about2 {
+}#facts-about2 {
     background: url("/img/Rectangle\ 58.png") no-repeat center top/cover;
     padding-bottom: 20px;
-}
-
-.message {
+}.message {
     border: 2px solid black;
     margin-left: 30px;
     padding: 13px 15px;
 
-}
-
-.message1 {
+}.message1 {
     border: 2px solid black;
     margin-right: 30px;
     padding: 13px 15px;
-}
-
-.messagebig {
+}.messagebig {
     border: 2px solid black;
     padding: 50px 40px;
     margin-right: 30px;
 
-}
-
-.carder {
+}.carder {
     transition: all 1s linear;
     background-color: white;
-}
-
-/* about2 end */
-/* media start*/
-.get-buys {
+}/* about2 end *//* media start*/.get-buys {
     margin-top: 50px;
     background: url("/img/Rectangle\ 17.png")no-repeat center top/cover;
     width: 100%;
     padding-top: 50px;
     padding-bottom: 50px;
-}
-
-.media-icons a {
+}.media-icons a {
     color: #C3873C;
     font-size: 30px;
-}
-
-.media-icons a:not(:first-child) {
+}.media-icons a:not(:first-child) {
     padding-left: 15px;
-}
-
-.time-res {
+}.time-res {
     padding-top: 50px;
-}
-
-.buydiv,
-.buydiv1,
-.buydiv2 {
+}.buydiv,.buydiv1,.buydiv2 {
     margin: auto;
     width: 20px;
     height: 20px;
     border: 1px solid black;
     border-radius: 5px;
     background-color: white;
-}
-
-/* js css */
-.terme {
+}/* js css */.terme {
     background-color: #e6e5e5;
     transition: all 0.2s ease-in-out;
-}
-
-.terme2 {
+}.terme2 {
     background-color: #C3873C;
     transition: all 0.2s ease-in-out;
-}
-
-.modalcha {
+}.modalcha {
     display: none;
     position: fixed;
     z-index: 10;
@@ -286,9 +175,7 @@ img {
     width: 400px;
     margin: auto;
     box-shadow: 0px 0px 10px gray;
-}
-
-@media only screen and (max-width: 1200px) {
+}@media only screen and (max-width: 1200px) {
     .time-res {
         padding-top: 150px;
     }
@@ -304,9 +191,7 @@ img {
     .abouttest h4 {
         font-size: 18px;
     }
-}
-
-@media only screen and (max-width: 992px) {
+}@media only screen and (max-width: 992px) {
     .home-status {
         margin-top: 50px;
     }
@@ -375,9 +260,7 @@ img {
         font-size: 20px;
     }
 
-}
-
-@media only screen and (max-width: 768px) {
+}@media only screen and (max-width: 768px) {
 
     .home-status {
         margin-top: 50px;
@@ -476,9 +359,7 @@ img {
         font-size: 15px;
     }
 
-}
-
-@media only screen and (max-width: 575px) {
+}@media only screen and (max-width: 575px) {
     .home-status1 {
         margin-top: 130px !important;
     }
@@ -560,16 +441,12 @@ img {
     .messagebig {
         padding: 15px 10px;
     }
-}
-
-@media only screen and (max-height:750px) {
+}@media only screen and (max-height:750px) {
     .fact-title h3 {
         font-size: 13px !important;
     }
 
-}
-
-@media only screen and (max-height:630px) {
+}@media only screen and (max-height:630px) {
     .about-title-res {
         font-size: 15px !important;
         padding-top: 50px !important;
@@ -590,9 +467,7 @@ img {
     }
 
 
-}
-
-@media only screen and (max-height:530px) {
+}@media only screen and (max-height:530px) {
     .getB-text {
         margin-top: 200px !important;
     }
