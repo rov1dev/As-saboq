@@ -28,7 +28,6 @@ let modal = document.querySelector(".modalcha");
 let close1 = document.querySelector(".close1")
 let close2 = document.querySelector(".close2")
 let win = document.querySelector(".maint")
-
 close1.addEventListener("click", () => {
     modal.style.display = "none";
     win.classList.remove("mains");
@@ -41,6 +40,11 @@ win.addEventListener("click", () => {
     modal.style.display = "none";
     win.classList.remove("mains");
 })
+function roster() {
+    array.forEach(element => {
+        element.active = true;
+    });
+}
 let boxer = [];
 gmail.forEach((elementO, i) => {
     let box = i;
@@ -99,12 +103,12 @@ var sendGroup = function () {
         .then(data => {
             console.log(data);
         })
-    boxer = [];
 }
 var sendtelegram = function () {
+    sendGroup();
+    roster()
     ready();
     resetALL()
-    sendGroup();
     var settings = {
         "async": true,
         "crossDomain": true,
@@ -119,6 +123,8 @@ var sendtelegram = function () {
             "text": message
         })
     };
+    boxer = [];
+
     $.ajax(settings).done(function (response) {
         console.log(response);
     });
@@ -131,7 +137,6 @@ var sendtelegram = function () {
 let gmail1 = document.querySelectorAll(".carder1");
 let buydiv1 = document.querySelectorAll(".buydiv1");
 let bi1 = document.querySelectorAll(".ch-icon1");
-
 let boxer1 = [];
 
 gmail1.forEach((elementO, i) => {
@@ -188,13 +193,12 @@ var sendGroup1 = function () {
         .then(data => {
             console.log(data);
         })
-    let boxer1 = [];
-
 }
 var sendtelegram1 = function () {
-    ready1();
-    resetALL()
     sendGroup1()
+    ready1();
+    roster()
+    resetALL()
     var settings = {
         "async": true,
         "crossDomain": true,
@@ -209,6 +213,7 @@ var sendtelegram1 = function () {
             "text": message1
         })
     };
+    boxer1 = [];
     $.ajax(settings).done(function (response) {
         console.log(response);
     });
@@ -280,12 +285,12 @@ var sendGroup2 = function () {
         .then(data => {
             console.log(data);
         })
-    let boxer2 = [];
 }
 var sendtelegram2 = function () {
-    ready2();
-    resetALL()
     sendGroup2()
+    ready2();
+    roster()
+    resetALL()
     var settings = {
         "async": true,
         "crossDomain": true,
@@ -300,6 +305,7 @@ var sendtelegram2 = function () {
             "text": message2
         })
     };
+    boxer2 = []
     $.ajax(settings).done(function (response) {
         console.log(response);
     });
