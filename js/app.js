@@ -1,24 +1,23 @@
-
-const array = [
+let array = [
     {
         id: 0,
         active: true,
-        name: "Arab-tili\t"
+        name: "Arab-tili%0A"
     },
     {
         id: 1,
         active: true,
-        name: "Ingliz-tili\t"
+        name: "Ingliz-tili%0A"
     },
     {
         id: 2,
         active: true,
-        name: "Rus-tili\t"
+        name: "Rus-tili%0A"
     },
     {
         id: 3,
         active: true,
-        name: "Xitoy-tili\t"
+        name: "Xitoy-tili%0A"
     }
 ];let gmail = document.querySelectorAll(".carder");let buydiv = document.querySelectorAll(".buydiv");let bi = document.querySelectorAll(".ch-icon");let modal = document.querySelector(".modalcha");let close1 = document.querySelector(".close1");let close2 = document.querySelector(".close2");let win = document.querySelector(".maint");close1.addEventListener("click", () => {
     modal.style.display = "none";
@@ -72,7 +71,8 @@ const array = [
     message = "Ismi: " + ismi + "\nNomer: " + familya + "\nKitob: " + boxer;
     win.classList.add("mains");
     modal.style.display = "block";
-};var sendGroup = function () {var telegram_botid = "6054114967:AAFfn-ajhy7IZOX_q0REmXVJiV3uCmNER9E";var chatid = "assaboqlid";
+};var sendGroup = function () {
+    var telegram_botid = "6054114967:AAFfn-ajhy7IZOX_q0REmXVJiV3uCmNER9E";var chatid = "assaboqlid";
     fetch(`https://api.telegram.org/bot${telegram_botid}/sendMessage?chat_id=@${chatid}&text=Yangi-buyurtma%0A%0AIsmi:${ismi}%0ANomer:${familya}%0AKitob:${boxer}`)
         .then(data => data.json())
         .then(data => {console.log(data);})
@@ -139,7 +139,8 @@ const array = [
     win.classList.add("mains");
     modal.style.display = "block";
 
-};var sendGroup1 = function () {var telegram_botid = "6054114967:AAFfn-ajhy7IZOX_q0REmXVJiV3uCmNER9E";var chatid = "assaboqlid";
+};var sendGroup1 = function () {
+    var telegram_botid = "6054114967:AAFfn-ajhy7IZOX_q0REmXVJiV3uCmNER9E";var chatid = "assaboqlid";
     fetch(`https://api.telegram.org/bot${telegram_botid}/sendMessage?chat_id=@${chatid}&text=Yangi-buyurtma%0A%0AIsmi:${ismi1}%0ANomer${familya1}%0AKitob:${boxer1}`)
         .then(data => data.json())
         .then(data => {console.log(data);})
@@ -207,7 +208,8 @@ const array = [
     modal.style.display = "block";
     win.classList.add("mains");
 
-};var sendGroup2 = function () {var telegram_botid = "6054114967:AAFfn-ajhy7IZOX_q0REmXVJiV3uCmNER9E";var chatid = "assaboqlid";
+};var sendGroup2 = function () {
+    var telegram_botid = "6054114967:AAFfn-ajhy7IZOX_q0REmXVJiV3uCmNER9E";var chatid = "assaboqlid";
     fetch(`https://api.telegram.org/bot${telegram_botid}/sendMessage?chat_id=@${chatid}&text=Yangi-buyurtma%0A%0AIsmi:${ismi2}%0ANomer${familya2}%0AKitob:${boxer2}`)
         .then(data => data.json())
         .then(data => {console.log(data);})
