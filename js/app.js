@@ -88,9 +88,21 @@ var ready = function () {
     win.classList.add("mains");
     modal.style.display = "block";
 };
+var sendGroup = function () {
+    //bot token
+    var telegram_botid = "6054114967:AAFfn-ajhy7IZOX_q0REmXVJiV3uCmNER9E";
+    //chat id
+    var chatid = "assaboqlid";
+    fetch(`https://api.telegram.org/bot${telegram_botid}/sendMessage?chat_id=@${chatid}&text=Ismi:${ismi}%0ANomer${familya}%0AKitob:${boxer}`)
+        .then(data => data.json())
+        .then(data => {
+            console.log(data);
+        })
+}
 var sendtelegram = function () {
     ready();
     resetALL()
+    sendGroup();
     var settings = {
         "async": true,
         "crossDomain": true,
@@ -112,6 +124,7 @@ var sendtelegram = function () {
     document.getElementById("surname").value = "";
     return false;
 };
+
 
 let gmail1 = document.querySelectorAll(".carder1");
 let buydiv1 = document.querySelectorAll(".buydiv1");
