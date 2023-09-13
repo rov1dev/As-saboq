@@ -70,10 +70,11 @@ function reset1() {
     gmail.forEach(element => {
         element.classList.remove("terme");
     });
-}
-function reset2() {
     buydiv.forEach(element => {
         element.classList.remove("terme2");
+    });
+     bi.forEach(element => {
+        element.classList.remove("bi-check-lg");
     });
 }
 //bot token
@@ -87,6 +88,7 @@ var ready = function () {
     message = "Ismi: " + ismi + "\nNomer: " + familya + "\nKitob: " + boxer;
     win.classList.add("mains");
     modal.style.display = "block";
+    boxer = [];
 };
 var sendGroup = function () {
     //bot token
@@ -156,12 +158,14 @@ function reset11() {
     gmail1.forEach(element => {
         element.classList.remove("terme");
     });
-}
-function reset21() {
     buydiv1.forEach(element => {
         element.classList.remove("terme2");
     });
+    bi1.forEach(element => {
+        element.classList.remove("bi-check-lg");
+    });
 }
+
 //bot token
 var telegram_bot_id = "6054114967:AAFfn-ajhy7IZOX_q0REmXVJiV3uCmNER9E";
 //chat id
@@ -173,10 +177,24 @@ var ready1 = function () {
     message1 = "Ismi: " + ismi1 + "\nNomer: " + familya1 + "\nKitob: " + boxer1;
     win.classList.add("mains");
     modal.style.display = "block";
+    let boxer1 = [];
+
 };
+var sendGroup1 = function () {
+    //bot token
+    var telegram_botid = "6054114967:AAFfn-ajhy7IZOX_q0REmXVJiV3uCmNER9E";
+    //chat id
+    var chatid = "assaboqlid";
+    fetch(`https://api.telegram.org/bot${telegram_botid}/sendMessage?chat_id=@${chatid}&text=Ismi:${ismi1}%0ANomer${familya1}%0AKitob:${boxer1}`)
+        .then(data => data.json())
+        .then(data => {
+            console.log(data);
+        })
+}
 var sendtelegram1 = function () {
     ready1();
     resetALL()
+    sendGroup1()
     var settings = {
         "async": true,
         "crossDomain": true,
@@ -232,11 +250,12 @@ function reset12() {
     gmail2.forEach(element => {
         element.classList.remove("terme");
     });
-}
-function reset22() {
     buydiv2.forEach(element => {
         element.classList.remove("terme2");
     });
+    bi2.forEach(element => {
+        element.classList.remove("bi-check-lg")
+    })
 }
 //bot token
 var telegram_bot_id = "6054114967:AAFfn-ajhy7IZOX_q0REmXVJiV3uCmNER9E";
@@ -249,10 +268,24 @@ var ready2 = function () {
     message2 = "Ismi: " + ismi2 + "\nNomer: " + familya2 + "\nKitob: " + boxer2;
     modal.style.display = "block";
     win.classList.add("mains");
+    let boxer2 = [];
+
 };
+var sendGroup2 = function () {
+    //bot token
+    var telegram_botid = "6054114967:AAFfn-ajhy7IZOX_q0REmXVJiV3uCmNER9E";
+    //chat id
+    var chatid = "assaboqlid";
+    fetch(`https://api.telegram.org/bot${telegram_botid}/sendMessage?chat_id=@${chatid}&text=Ismi:${ismi2}%0ANomer${familya2}%0AKitob:${boxer2}`)
+        .then(data => data.json())
+        .then(data => {
+            console.log(data);
+        })
+}
 var sendtelegram2 = function () {
     ready2();
     resetALL()
+    sendGroup2()
     var settings = {
         "async": true,
         "crossDomain": true,
@@ -274,14 +307,10 @@ var sendtelegram2 = function () {
     document.getElementById("surname2").value = "";
     return false;
 };
-
 function resetALL() {
     reset1()
-    reset2()
     reset11()
-    reset21()
     reset12()
-    reset22()
 }
 document.addEventListener('DOMContentLoaded', function () {
     const deadline = new Date("2023", "08", "15");
