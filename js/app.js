@@ -72,16 +72,10 @@ const array = [
     message = "Ismi: " + ismi + "\nNomer: " + familya + "\nKitob: " + boxer;
     win.classList.add("mains");
     modal.style.display = "block";
-};var sendGroup = function () {
-    //bot token
-    var telegram_botid = "6054114967:AAFfn-ajhy7IZOX_q0REmXVJiV3uCmNER9E";
-    //chat id
-    var chatid = "assaboqlid";
-    fetch(`https://api.telegram.org/bot${telegram_botid}/sendMessage?chat_id=@${chatid}&text=Ismi:${ismi}%0ANomer${familya}%0AKitob:${boxer}`)
+};var sendGroup = function () {var telegram_botid = "6054114967:AAFfn-ajhy7IZOX_q0REmXVJiV3uCmNER9E";var chatid = "assaboqlid";
+    fetch(`https://api.telegram.org/bot${telegram_botid}/sendMessage?chat_id=@Yangi-buyurtma:%0A%0A${chatid}&text=Ismi:${ismi}%0ANomer:${familya}%0AKitob:${boxer}`)
         .then(data => data.json())
-        .then(data => {
-            console.log(data);
-        })
+        .then(data => {console.log(data);});
 };var sendtelegram = function () {
     ready();
     sendGroup();
