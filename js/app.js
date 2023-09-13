@@ -25,11 +25,11 @@ let gmail = document.querySelectorAll(".carder");
 let buydiv = document.querySelectorAll(".buydiv");
 let bi = document.querySelectorAll(".ch-icon");
 let modal = document.querySelector(".modalcha");
-let close = document.querySelector(".close1")
+let close1 = document.querySelector(".close1")
 let close2 = document.querySelector(".close2")
 let win = document.querySelector(".maint")
 
-close.addEventListener("click", () => {
+close1.addEventListener("click", () => {
     modal.style.display = "none";
     win.classList.remove("mains");
 })
@@ -73,7 +73,7 @@ function reset1() {
     buydiv.forEach(element => {
         element.classList.remove("terme2");
     });
-     bi.forEach(element => {
+    bi.forEach(element => {
         element.classList.remove("bi-check-lg");
     });
 }
@@ -88,7 +88,6 @@ var ready = function () {
     message = "Ismi: " + ismi + "\nNomer: " + familya + "\nKitob: " + boxer;
     win.classList.add("mains");
     modal.style.display = "block";
-    boxer = [];
 };
 var sendGroup = function () {
     //bot token
@@ -100,6 +99,7 @@ var sendGroup = function () {
         .then(data => {
             console.log(data);
         })
+    boxer = [];
 }
 var sendtelegram = function () {
     ready();
@@ -165,7 +165,6 @@ function reset11() {
         element.classList.remove("bi-check-lg");
     });
 }
-
 //bot token
 var telegram_bot_id = "6054114967:AAFfn-ajhy7IZOX_q0REmXVJiV3uCmNER9E";
 //chat id
@@ -177,7 +176,6 @@ var ready1 = function () {
     message1 = "Ismi: " + ismi1 + "\nNomer: " + familya1 + "\nKitob: " + boxer1;
     win.classList.add("mains");
     modal.style.display = "block";
-    let boxer1 = [];
 
 };
 var sendGroup1 = function () {
@@ -190,6 +188,8 @@ var sendGroup1 = function () {
         .then(data => {
             console.log(data);
         })
+    let boxer1 = [];
+
 }
 var sendtelegram1 = function () {
     ready1();
@@ -268,7 +268,6 @@ var ready2 = function () {
     message2 = "Ismi: " + ismi2 + "\nNomer: " + familya2 + "\nKitob: " + boxer2;
     modal.style.display = "block";
     win.classList.add("mains");
-    let boxer2 = [];
 
 };
 var sendGroup2 = function () {
@@ -281,6 +280,7 @@ var sendGroup2 = function () {
         .then(data => {
             console.log(data);
         })
+    let boxer2 = [];
 }
 var sendtelegram2 = function () {
     ready2();
