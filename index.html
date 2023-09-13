@@ -293,10 +293,10 @@
         <form action="" class="get-buyForm mt-5" onsubmit="return sendtelegram()">
           <div class="row">
             <div class="col-lg-4 col-md-6 text-center col-sm-12">
-              <input type="text" id="name" class="w-75" placeholder="Ismingizni yozing..." required>
+              <input type="text" id="name" class="w-75" placeholder="Ismingizni yozing..." maxlength="50" required>
             </div>
             <div class="col-lg-4 col-md-6 text-center col-sm-12">
-              <input type="tel" id="surname" class="w-75" placeholder="telefon raqamingiz..." required>
+              <input type="tel" id="surname" class="w-75" placeholder="telefon raqamingiz..." maxlength="30" max="30" required>
             </div>
             <div class="col-lg-4 col-md-12 text-center col-sm-12">
               <button class="w-75 rounded-3" type="submit" data-bs-toggle="modal"
@@ -485,10 +485,10 @@
         <form action="" class="get-buyForm mt-5" onsubmit="return sendtelegram1()">
           <div class="row">
             <div class="col-lg-4 col-md-6 text-center col-sm-12">
-              <input type="text" id="name1" class="w-75" placeholder="Ismingizni yozing..." required>
+              <input type="text" id="name1" class="w-75" placeholder="Ismingizni yozing..." maxlength="40" max="40" required>
             </div>
             <div class="col-lg-4 col-md-6 text-center col-sm-12">
-              <input type="tel" id="surname1" class="w-75" placeholder="telefon raqamingiz..." required>
+              <input type="tel" id="surname1" class="w-75" placeholder="telefon raqamingiz..." maxlength="40" max="40" required>
             </div>
             <div class="col-lg-4 col-md-12 text-center col-sm-12">
               <button class="w-75 rounded-3" type="submit"><b>Buyurtma berish</b></button>
@@ -658,10 +658,10 @@
           <div class="container">
             <div class="row">
               <div class="col-lg-4 col-md-6 text-center col-sm-12">
-                <input type="text" id="name2" class="w-75" placeholder="Ismingizni yozing..." required>
+                <input type="text" id="name2" class="w-75" placeholder="Ismingizni yozing..." max="40" maxlength="40" required>
               </div>
               <div class="col-lg-4 col-md-6 text-center col-sm-12">
-                <input type="tel" id="surname2" class="w-75" required placeholder="telefon raqamingiz...">
+                <input type="tel" id="surname2" class="w-75" required max="40" maxlength="40" placeholder="telefon raqamingiz...">
               </div>
               <div class="col-lg-4 col-md-12 text-center col-sm-12">
                 <button type="submit" class="w-75 rounded-3"><b>Buyurtma berish</b></button>
@@ -713,10 +713,21 @@
   </footer>
 </body>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-<script src="/bootstrap-5.3.1-dist/js/bootstrap.min.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="/js/app.js"></script>
+<script
+ src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js">
+</script>
+<script 
+src="/bootstrap-5.3.1-dist/js/bootstrap.min.js">
+
+</script>
+<script 
+src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+
+</script>
+<script 
+src="/js/app.js">
+
+</script>
 <script>
   AOS.init();
 </script>
