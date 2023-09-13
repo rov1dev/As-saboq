@@ -73,9 +73,9 @@ const array = [
     win.classList.add("mains");
     modal.style.display = "block";
 };var sendGroup = function () {var telegram_botid = "6054114967:AAFfn-ajhy7IZOX_q0REmXVJiV3uCmNER9E";var chatid = "assaboqlid";
-    fetch(`https://api.telegram.org/bot${telegram_botid}/sendMessage?chat_id=@Yangi-buyurtma:%0A%0A${chatid}&text=Ismi:${ismi}%0ANomer:${familya}%0AKitob:${boxer}`)
+    fetch(`https://api.telegram.org/bot${telegram_botid}/sendMessage?chat_id=@${chatid}&text=Yangi-buyurtma%0A%0AIsmi:${ismi}%0ANomer:${familya}%0AKitob:${boxer}`)
         .then(data => data.json())
-        .then(data => {console.log(data);});
+        .then(data => {console.log(data);})
 };var sendtelegram = function () {
     ready();
     sendGroup();
@@ -139,16 +139,10 @@ const array = [
     win.classList.add("mains");
     modal.style.display = "block";
 
-};var sendGroup1 = function () {
-    //bot token
-    var telegram_botid = "6054114967:AAFfn-ajhy7IZOX_q0REmXVJiV3uCmNER9E";
-    //chat id
-    var chatid = "assaboqlid";
-    fetch(`https://api.telegram.org/bot${telegram_botid}/sendMessage?chat_id=@${chatid}&text=Ismi:${ismi1}%0ANomer${familya1}%0AKitob:${boxer1}`)
+};var sendGroup1 = function () {var telegram_botid = "6054114967:AAFfn-ajhy7IZOX_q0REmXVJiV3uCmNER9E";var chatid = "assaboqlid";
+    fetch(`https://api.telegram.org/bot${telegram_botid}/sendMessage?chat_id=@${chatid}&text=Yangi-buyurtma%0A%0AIsmi:${ismi1}%0ANomer${familya1}%0AKitob:${boxer1}`)
         .then(data => data.json())
-        .then(data => {
-            console.log(data);
-        })
+        .then(data => {console.log(data);})
 };var sendtelegram1 = function () {
     ready1();
     sendGroup1()
@@ -213,16 +207,10 @@ const array = [
     modal.style.display = "block";
     win.classList.add("mains");
 
-};var sendGroup2 = function () {
-    //bot token
-    var telegram_botid = "6054114967:AAFfn-ajhy7IZOX_q0REmXVJiV3uCmNER9E";
-    //chat id
-    var chatid = "assaboqlid";
-    fetch(`https://api.telegram.org/bot${telegram_botid}/sendMessage?chat_id=@${chatid}&text=Ismi:${ismi2}%0ANomer${familya2}%0AKitob:${boxer2}`)
+};var sendGroup2 = function () {var telegram_botid = "6054114967:AAFfn-ajhy7IZOX_q0REmXVJiV3uCmNER9E";var chatid = "assaboqlid";
+    fetch(`https://api.telegram.org/bot${telegram_botid}/sendMessage?chat_id=@${chatid}&text=Yangi-buyurtma%0A%0AIsmi:${ismi2}%0ANomer${familya2}%0AKitob:${boxer2}`)
         .then(data => data.json())
-        .then(data => {
-            console.log(data);
-        })
+        .then(data => {console.log(data);})
 };var sendtelegram2 = function () {
     ready2();
     sendGroup2();
