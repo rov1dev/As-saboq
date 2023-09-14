@@ -1,38 +1,17 @@
 let array = [
-    {
-        id: 0,
-        active: true,
-        name: "Arab-tili%0A"
-    },
-    {
-        id: 1,
-        active: true,
-        name: "Ingliz-tili%0A"
-    },
-    {
-        id: 2,
-        active: true,
-        name: "Rus-tili%0A"
-    },
-    {
-        id: 3,
-        active: true,
-        name: "Xitoy-tili%0A"
-    }
-];let gmail = document.querySelectorAll(".carder");let buydiv = document.querySelectorAll(".buydiv");let bi = document.querySelectorAll(".ch-icon");let modal = document.querySelector(".modalcha");let close1 = document.querySelector(".close1");let close2 = document.querySelector(".close2");let win = document.querySelector(".maint");close1.addEventListener("click", () => {
+    {id: 0,active: true,name: "Arab-tili%0A"},{id: 1,active: true,name: "Ingliz-tili%0A"},{id: 2,active: true,name: "Rus-tili%0A"},{id: 3,active: true,name: "Xitoy-tili%0A"}
+];let gmail = document.querySelectorAll(".carder"); let buydiv = document.querySelectorAll(".buydiv"); let bi = document.querySelectorAll(".ch-icon"); let modal = document.querySelector(".modalcha");let close2 = document.querySelector(".close2"); let win = document.querySelector(".maint");
+close2.addEventListener("click", () => {
     modal.style.display = "none";
     win.classList.remove("mains");
-});close2.addEventListener("click", () => {
+}); win.addEventListener("click", () => {
     modal.style.display = "none";
     win.classList.remove("mains");
-});win.addEventListener("click", () => {
-    modal.style.display = "none";
-    win.classList.remove("mains");
-});function roster() {
+}); let boxer = [];function truser() {
     array.forEach(element => {
         element.active = true;
     });
-};let boxer = [];gmail.forEach((elementO, i) => {
+}gmail.forEach((elementO, i) => {
     let box = i;
     elementO.addEventListener("click", () => {
         elementO.classList.toggle("terme");
@@ -41,21 +20,30 @@ let array = [
         array.forEach(element => {
             if (box == element.id) {
                 if (element.active) {
-                    boxer.push(element.name)
+                    // boxer.push(element.name)
                     element.active = false;
-                    console.log(boxer)
+                    console.log(array)
                 }
                 else {
-                    boxer.pop(element.name)
+                    // boxer.pop(element.name)
                     element.active = true;
-                    console.log(boxer);
+                    console.log(array);
                 }
             }
         })
 
     })
 
-});function reset1() {
+});function roster() {
+    array.forEach(element => {
+        if (element.active == false) {
+            boxer += element.name;
+            console.log(boxer);
+        }else{
+            console.log("1");
+        }
+    });
+}; function reset1() {
     gmail.forEach(element => {
         element.classList.remove("terme");
     });
@@ -65,22 +53,23 @@ let array = [
     bi.forEach(element => {
         element.classList.remove("bi-check-lg");
     });
-};var telegram_bot_id = "6054114967:AAFfn-ajhy7IZOX_q0REmXVJiV3uCmNER9E";var chat_id = 1524783641;var ismi, familya, message;var ready = function () {
+}; var telegram_bot_id = "6054114967:AAFfn-ajhy7IZOX_q0REmXVJiV3uCmNER9E"; var chat_id = 1524783641; var ismi, familya, message; var ready = function () {
     ismi = document.getElementById("name").value;
     familya = document.getElementById("surname").value;
     message = "Ismi: " + ismi + "\nNomer: " + familya + "\nKitob: " + boxer;
     win.classList.add("mains");
     modal.style.display = "block";
-};var sendGroup = function () {
-    var telegram_botid = "6054114967:AAFfn-ajhy7IZOX_q0REmXVJiV3uCmNER9E";var chatid = "assaboqlid";
+}; var sendGroup = function () {
+    var telegram_botid = "6054114967:AAFfn-ajhy7IZOX_q0REmXVJiV3uCmNER9E"; var chatid = "assaboqlid";
     fetch(`https://api.telegram.org/bot${telegram_botid}/sendMessage?chat_id=@${chatid}&text=Yangi-buyurtma%0A%0AIsmi:${ismi}%0ANomer:${familya}%0AKitob:${boxer}`)
         .then(data => data.json())
-        .then(data => {console.log(data);})
-};var sendtelegram = function () {
+        .then(data => { console.log(data); })
+}; var sendtelegram = function () {
+    roster();
     ready();
     sendGroup();
-    roster()
-    resetALL()
+    truser();
+    resetALL();
     var settings = {
         "async": true,
         "crossDomain": true,
@@ -103,7 +92,7 @@ let array = [
     document.getElementById("name").value = "";
     document.getElementById("surname").value = "";
     return false;
-};let gmail1 = document.querySelectorAll(".carder1");let buydiv1 = document.querySelectorAll(".buydiv1");let bi1 = document.querySelectorAll(".ch-icon1");let boxer1 = [];gmail1.forEach((elementO, i) => {
+}; let gmail1 = document.querySelectorAll(".carder1"); let buydiv1 = document.querySelectorAll(".buydiv1"); let bi1 = document.querySelectorAll(".ch-icon1"); let boxer1 = []; gmail1.forEach((elementO, i) => {
     let box1 = i;
     elementO.addEventListener("click", () => {
         elementO.classList.toggle("terme");
@@ -122,7 +111,7 @@ let array = [
             }
         })
     });
-});function reset11() {
+}); function reset11() {
     gmail1.forEach(element => {
         element.classList.remove("terme");
     });
@@ -132,19 +121,19 @@ let array = [
     bi1.forEach(element => {
         element.classList.remove("bi-check-lg");
     });
-};var telegram_bot_id = "6054114967:AAFfn-ajhy7IZOX_q0REmXVJiV3uCmNER9E";var chat_id = 1524783641;var ismi1, familya1, message1;var ready1 = function () {
+}; var telegram_bot_id = "6054114967:AAFfn-ajhy7IZOX_q0REmXVJiV3uCmNER9E"; var chat_id = 1524783641; var ismi1, familya1, message1; var ready1 = function () {
     ismi1 = document.getElementById("name1").value;
     familya1 = document.getElementById("surname1").value;
     message1 = "Ismi: " + ismi1 + "\nNomer: " + familya1 + "\nKitob: " + boxer1;
     win.classList.add("mains");
     modal.style.display = "block";
 
-};var sendGroup1 = function () {
-    var telegram_botid = "6054114967:AAFfn-ajhy7IZOX_q0REmXVJiV3uCmNER9E";var chatid = "assaboqlid";
+}; var sendGroup1 = function () {
+    var telegram_botid = "6054114967:AAFfn-ajhy7IZOX_q0REmXVJiV3uCmNER9E"; var chatid = "assaboqlid";
     fetch(`https://api.telegram.org/bot${telegram_botid}/sendMessage?chat_id=@${chatid}&text=Yangi-buyurtma%0A%0AIsmi:${ismi1}%0ANomer${familya1}%0AKitob:${boxer1}`)
         .then(data => data.json())
-        .then(data => {console.log(data);})
-};var sendtelegram1 = function () {
+        .then(data => { console.log(data); })
+}; var sendtelegram1 = function () {
     ready1();
     sendGroup1()
     roster()
@@ -170,7 +159,7 @@ let array = [
     document.getElementById("name1").value = "";
     document.getElementById("surname1").value = "";
     return false;
-};let gmail2 = document.querySelectorAll(".carder2");let buydiv2 = document.querySelectorAll(".buydiv2");let bi2 = document.querySelectorAll(".ch-ico2");let boxer2 = [];gmail2.forEach((elementO, i) => {
+}; let gmail2 = document.querySelectorAll(".carder2"); let buydiv2 = document.querySelectorAll(".buydiv2"); let bi2 = document.querySelectorAll(".ch-ico2"); let boxer2 = []; gmail2.forEach((elementO, i) => {
     let box2 = i;
     elementO.addEventListener("click", () => {
         elementO.classList.toggle("terme");
@@ -191,7 +180,7 @@ let array = [
             }
         })
     });
-});function reset12() {
+}); function reset12() {
     gmail2.forEach(element => {
         element.classList.remove("terme");
     });
@@ -201,19 +190,19 @@ let array = [
     bi2.forEach(element => {
         element.classList.remove("bi-check-lg")
     })
-};var telegram_bot_id = "6054114967:AAFfn-ajhy7IZOX_q0REmXVJiV3uCmNER9E";var chat_id = 1524783641;var ismi2, familya2, message2;var ready2 = function () {
+}; var telegram_bot_id = "6054114967:AAFfn-ajhy7IZOX_q0REmXVJiV3uCmNER9E"; var chat_id = 1524783641; var ismi2, familya2, message2; var ready2 = function () {
     ismi2 = document.getElementById("name2").value;
     familya2 = document.getElementById("surname2").value;
     message2 = "Ismi: " + ismi2 + "\nNomer: " + familya2 + "\nKitob: " + boxer2;
     modal.style.display = "block";
     win.classList.add("mains");
 
-};var sendGroup2 = function () {
-    var telegram_botid = "6054114967:AAFfn-ajhy7IZOX_q0REmXVJiV3uCmNER9E";var chatid = "assaboqlid";
+}; var sendGroup2 = function () {
+    var telegram_botid = "6054114967:AAFfn-ajhy7IZOX_q0REmXVJiV3uCmNER9E"; var chatid = "assaboqlid";
     fetch(`https://api.telegram.org/bot${telegram_botid}/sendMessage?chat_id=@${chatid}&text=Yangi-buyurtma%0A%0AIsmi:${ismi2}%0ANomer${familya2}%0AKitob:${boxer2}`)
         .then(data => data.json())
-        .then(data => {console.log(data);})
-};var sendtelegram2 = function () {
+        .then(data => { console.log(data); })
+}; var sendtelegram2 = function () {
     ready2();
     sendGroup2();
     roster()
@@ -239,15 +228,16 @@ let array = [
     document.getElementById("name2").value = "";
     document.getElementById("surname2").value = "";
     return false;
-};function resetALL() {
+}; function resetALL() {
     reset1()
     reset11()
     reset12()
-};document.addEventListener('DOMContentLoaded', function () {
+}; document.addEventListener('DOMContentLoaded', function () {
     const deadline = new Date("2023", "08", "15");// id таймера
     let timerId = null;// склонение числительных
-    function declensionNum(num, words) {return words[(num % 100 > 4 && num % 100 < 20) ? 2 : [2, 0, 1, 1, 1, 2][(num % 10 < 5) ? num % 10 : 5]];}// вычисляем разницу дат и устанавливаем оставшееся времени в качестве содержимого элементов
-    function countdownTimer() {const diff = deadline - new Date();if (diff <= 0) {clearInterval(timerId);}
+    function declensionNum(num, words) { return words[(num % 100 > 4 && num % 100 < 20) ? 2 : [2, 0, 1, 1, 1, 2][(num % 10 < 5) ? num % 10 : 5]]; }// вычисляем разницу дат и устанавливаем оставшееся времени в качестве содержимого элементов
+    function countdownTimer() {
+        const diff = deadline - new Date(); if (diff <= 0) { clearInterval(timerId); }
         const days = diff > 0 ? Math.floor(diff / 1000 / 60 / 60 / 24) : 0;
         const hours = diff > 0 ? Math.floor(diff / 1000 / 60 / 60) % 24 : 0;
         const minutes = diff > 0 ? Math.floor(diff / 1000 / 60) % 60 : 0;
